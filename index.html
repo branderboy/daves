@@ -1,1 +1,657 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoreOS | Dave & Buster's Capitol Heights</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#FF5A00', // D&B inspired orange
+                            blue: '#0056A3',   // D&B inspired blue
+                            dark: '#0B1120',
+                            card: '#1E293B',
+                            light: '#F8FAFC'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(to right, #FF5A00, #FF8A00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glow-effect {
+            box-shadow: 0 0 40px -10px rgba(255, 90, 0, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-600 font-sans antialiased selection:bg-brand-orange selection:text-white">
 
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <i data-lucide="cpu" class="w-8 h-8 text-brand-orange"></i>
+                    <div class="flex flex-col">
+                        <span class="text-slate-900 font-extrabold text-xl tracking-tight leading-none">StoreOS</span>
+                        <span class="text-brand-orange font-bold text-[9px] uppercase tracking-wider mt-1">In-Store Marketing & Sales Rep</span>
+                    </div>
+                    <span class="text-slate-400 font-medium text-sm ml-3 pl-3 border-l border-slate-200 hidden sm:inline">Capitol Heights Pilot</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#problem" class="text-sm font-medium text-slate-600 hover:text-brand-orange transition-colors">The Problem</a>
+                    <a href="#system" class="text-sm font-medium text-slate-600 hover:text-brand-orange transition-colors">The Solution</a>
+                    <a href="#opportunities" class="text-sm font-medium text-slate-600 hover:text-brand-orange transition-colors">The Math</a>
+                    <a href="#timeline" class="text-sm font-medium text-slate-600 hover:text-brand-orange transition-colors">Validation Plan</a>
+                    <a href="#pricing" class="text-sm font-medium text-slate-600 hover:text-brand-orange transition-colors">Pricing</a>
+                </div>
+                <a href="#pricing" class="bg-gradient-to-b from-[#FF7A00] to-[#cc4600] border-b-[4px] border-[#993400] hover:border-b-[2px] hover:translate-y-[2px] active:border-b-0 active:translate-y-[4px] text-white px-6 py-2.5 rounded-md font-bold uppercase tracking-wider transition-all shadow-lg flex items-center gap-2">
+                    Review Pilot <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-24 lg:pt-48 lg:pb-32 overflow-hidden relative bg-white">
+        <!-- Subtle background pattern for light theme -->
+        <div class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-50 -z-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Text -->
+                <div class="text-left order-2 lg:order-1">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-orange/10 border border-brand-orange/20 text-brand-orange text-sm font-medium mb-8">
+                        <span class="relative flex h-2 w-2">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-orange opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-orange"></span>
+                        </span>
+                        Enterprise Pilot: Capitol Heights
+                    </div>
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
+                        You don't lack demand. <br class="hidden md:block" />
+                        <span class="gradient-text">You lack execution timing.</span>
+                    </h1>
+                    
+                    <div class="border-l-4 border-brand-orange pl-5 py-2 mb-8 bg-orange-50/50 rounded-r-xl">
+                        <p class="text-lg font-bold text-slate-800 italic">"Foot traffic is a lagging indicator of local execution."</p>
+                    </div>
+
+                    <p class="text-xl text-slate-600 mb-12 max-w-2xl leading-relaxed">
+                        <strong class="text-slate-900">StoreOS</strong> acts as your automated <strong class="text-brand-orange">in-store Marketing & Sales Rep</strong>, bridging the gap between dormant POS data and daily, localized marketing. We target a modeled <strong class="text-slate-900">+$1.5M incremental revenue lift</strong> through strict phased validation, not hype.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-start gap-4">
+                        <a href="#opportunities" class="group relative inline-flex flex-col items-center justify-center w-full sm:w-auto bg-gradient-to-b from-[#FF7A00] to-[#cc4600] border-b-[5px] border-[#993400] hover:border-b-[3px] hover:translate-y-[2px] active:border-b-0 active:translate-y-[5px] text-white px-8 py-4 rounded-xl font-black text-xl md:text-2xl transition-all shadow-[0_10px_30px_rgba(255,90,0,0.4)] uppercase tracking-wide">
+                            <span class="flex items-center gap-2">VERIFY THE MATH <i data-lucide="chevrons-right" class="w-6 h-6 group-hover:translate-x-1 transition-transform"></i></span>
+                            <span class="text-xs md:text-sm font-medium text-white/80 normal-case mt-1 tracking-normal">See the operational breakdown</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hero Image Story -->
+                <div class="relative order-1 lg:order-2 mb-8 lg:mb-0 w-full">
+                    <div class="absolute inset-0 bg-brand-orange/20 blur-[80px] rounded-full"></div>
+                    <!-- Main Hero Image (Authentic Dave & Buster's Interior) -->
+                    <img src="https://platform.dc.eater.com/wp-content/uploads/sites/9/chorus/uploads/chorus_asset/file/15778873/davebusters.0.0.1461676509.jpg?quality=90&strip=all&crop=0.078616352201252%2C0%2C99.842767295597%2C100&w=1080" alt="Dave & Buster's Interior Arcade" class="relative rounded-2xl border border-slate-200 shadow-2xl object-cover h-[400px] lg:h-[500px] w-full transform lg:-rotate-2 hover:rotate-0 transition-transform duration-500">
+                    
+                    <!-- Floating Data Badge 1 -->
+                    <div class="absolute -bottom-6 -left-4 lg:-left-8 bg-white border border-slate-200 p-4 lg:p-5 rounded-2xl shadow-xl flex items-center gap-4 hover:translate-y-1 transition-transform z-10">
+                        <div class="bg-emerald-100 p-3 rounded-full">
+                            <i data-lucide="trending-up" class="w-6 h-6 text-emerald-600"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-500 uppercase font-bold tracking-wider">Modeled Baseline Lift</p>
+                            <p class="text-xl lg:text-2xl text-slate-900 font-black">+$1.5M/yr</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Data Badge 2 (Live POS Sync) -->
+                    <div class="absolute top-8 -right-2 lg:-right-6 bg-white border border-slate-200 p-4 rounded-2xl shadow-xl flex items-center gap-4 z-10 hover:-translate-y-1 transition-transform">
+                        <div class="bg-blue-50 p-2.5 rounded-full relative">
+                            <span class="absolute top-0 right-0 flex h-3 w-3">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500 border-2 border-white"></span>
+                            </span>
+                            <i data-lucide="database-zap" class="w-5 h-5 text-brand-blue"></i>
+                        </div>
+                        <div class="pr-2 text-left">
+                            <p class="text-[10px] text-slate-500 uppercase font-bold tracking-wider mb-0.5">Live Connection</p>
+                            <p class="text-sm text-slate-900 font-black tracking-tight">In-Store Data Sync</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT'S BROKEN TODAY (The Real Problem) -->
+    <section id="problem" class="py-24 bg-slate-50 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold text-red-500 uppercase tracking-wider mb-2">The Execution Gap</h2>
+                <h3 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6">Why hasn't your current stack solved this?</h3>
+                <p class="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+                    You have rich POS data. You have a 7M+ loyalty base. You have the marketing tools. But tools don't execute themselves. Corporate strategy is strong, but it fails to translate to daily, localized action because <strong>there is no automated execution layer at the store level.</strong>
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 mb-16 items-center">
+                <div class="space-y-6">
+                    <div class="border-l-4 border-slate-900 pl-5 py-2 mb-6">
+                        <p class="text-lg font-bold text-slate-800 italic">"Data at rest is an expense. Data in motion is revenue."</p>
+                    </div>
+                    <p class="text-slate-600">GMs are too busy managing the floor to act as local field marketers. Data is analyzed in hindsight during monthly post-mortems rather than used proactively to recover an underperforming Tuesday afternoon.</p>
+                    <p class="text-slate-600 font-medium"><strong class="text-slate-900">StoreOS</strong> is the missing operational engine—an AI-driven in-store Marketing & Sales Rep that acts on your data autonomously.</p>
+                </div>
+
+                <!-- Before vs After Visual -->
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-xl overflow-hidden">
+                    <div class="grid grid-cols-2 divide-x divide-slate-200">
+                        <!-- Before -->
+                        <div class="p-6 bg-slate-50">
+                            <h4 class="font-bold text-red-500 mb-6 flex items-center gap-2"><i data-lucide="x-circle" class="w-5 h-5"></i> Current Reality</h4>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3 text-sm text-slate-600">
+                                    <i data-lucide="alert-circle" class="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5"></i>
+                                    <span>GMs forced into reactive floor management</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-slate-600">
+                                    <i data-lucide="alert-circle" class="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5"></i>
+                                    <span>Empty afternoon dayparts ignored</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-slate-600">
+                                    <i data-lucide="alert-circle" class="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5"></i>
+                                    <span>Generic, top-down national promotions</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-slate-600">
+                                    <i data-lucide="alert-circle" class="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5"></i>
+                                    <span>Data used strictly for look-back reporting</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- After -->
+                        <div class="p-6 bg-emerald-50/30">
+                            <h4 class="font-bold text-emerald-600 mb-6 flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5"></i> With StoreOS</h4>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3 text-sm text-slate-900 font-medium">
+                                    <i data-lucide="zap" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                                    <span>Proactive, automated daily triggers</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-slate-900 font-medium">
+                                    <i data-lucide="zap" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                                    <span>Targeted daypart recovery campaigns</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-slate-900 font-medium">
+                                    <i data-lucide="zap" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                                    <span>Hyper-local, branded community events</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-slate-900 font-medium">
+                                    <i data-lucide="zap" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                                    <span>Data powers same-day execution</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works: The 4-Agent System -->
+    <section id="system" class="py-24 relative bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">The Execution Layer: 4 Autonomous Agents</h2>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">This is an operational engine, not a staff replacement. Agents handle the data, targeting, and distribution so your team can focus on the guest experience.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-lg transition-all group">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="radar" class="w-7 h-7 text-brand-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">1. Market Intel</h3>
+                    <p class="text-sm text-slate-600 mb-4 line-clamp-3">Monitors POS, CRM, and local sports schedules. Identifies traffic anomalies, lapsing VIPs, and external triggers daily at 6am.</p>
+                </div>
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-lg transition-all group">
+                    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="sparkles" class="w-7 h-7 text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">2. Promotion Gen</h3>
+                    <p class="text-sm text-slate-600 mb-4 line-clamp-3">Analyzes data to generate localized campaigns. Drafts highly-targeted email copy, SMS alerts, and designs event offers.</p>
+                </div>
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-lg transition-all group">
+                    <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="zap" class="w-7 h-7 text-brand-orange"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">3. Task Execution</h3>
+                    <p class="text-sm text-slate-600 mb-4 line-clamp-3">Requires simple GM approval, then automatically publishes Eventbrite listings, distributes SMS/Emails, and runs geo-fenced ads.</p>
+                </div>
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-lg transition-all group">
+                    <div class="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="bar-chart-3" class="w-7 h-7 text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">4. ROI Tracking</h3>
+                    <p class="text-sm text-slate-600 mb-4 line-clamp-3">Monitors the conversion loop. Tracks leading indicators against campaign deployments to mathematically prove incremental revenue.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE MATH (Operational Proof) -->
+    <section id="opportunities" class="py-24 bg-slate-50 border-t border-slate-200 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-slate-200/50 to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold text-brand-orange uppercase tracking-wider mb-2">The Operational Proof</h2>
+                <h3 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6">Why +$1.5M isn't pitch math.</h3>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">This is a repeatable execution machine deployed systematically across empty dayparts, dormant customer segments, and high-margin seasonal events.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-8 mb-16">
+                <!-- Detailed Breakdowns -->
+                <div class="lg:col-span-7 space-y-6">
+                    
+                    <!-- Micro Example 1 -->
+                    <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center gap-6">
+                        <div class="flex-1 text-center sm:text-left">
+                            <span class="bg-orange-100 text-brand-orange text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-2 inline-block">Lever 1: Daypart Recovery</span>
+                            <h4 class="text-lg font-bold text-slate-900">Thursday Power Hour (4-6pm)</h4>
+                            <p class="text-sm text-slate-600 mt-1">Automated B2B outreach + geo-fenced alerts targeted to local office parks.</p>
+                        </div>
+                        <div class="flex items-center gap-4 text-center border-t sm:border-t-0 sm:border-l border-slate-200 pt-4 sm:pt-0 sm:pl-6 w-full sm:w-auto">
+                            <div>
+                                <p class="text-xs text-slate-500 font-medium mb-1">Weekly Lift</p>
+                                <p class="text-xl font-bold text-slate-900">+$4,000</p>
+                            </div>
+                            <div>
+                                <i data-lucide="arrow-right" class="w-5 h-5 text-slate-300"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-brand-orange font-bold mb-1">Annualized</p>
+                                <p class="text-2xl font-black text-brand-orange">+$208K</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Micro Example 2 -->
+                    <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center gap-6">
+                        <div class="flex-1 text-center sm:text-left">
+                            <span class="bg-purple-100 text-purple-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-2 inline-block">Lever 2: Segment Reactivation</span>
+                            <h4 class="text-lg font-bold text-slate-900">Lapsed VIP Outreach</h4>
+                            <p class="text-sm text-slate-600 mt-1">Identifies top 10% spenders dormant for 90 days. Triggers personalized reactivation scripts and GM call queues.</p>
+                        </div>
+                        <div class="flex items-center gap-4 text-center border-t sm:border-t-0 sm:border-l border-slate-200 pt-4 sm:pt-0 sm:pl-6 w-full sm:w-auto">
+                            <div>
+                                <p class="text-xs text-slate-500 font-medium mb-1">Target Conv.</p>
+                                <p class="text-xl font-bold text-slate-900">15%</p>
+                            </div>
+                            <div>
+                                <i data-lucide="arrow-right" class="w-5 h-5 text-slate-300"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-brand-orange font-bold mb-1">Annualized</p>
+                                <p class="text-2xl font-black text-brand-orange">+$280K</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Micro Example 3 -->
+                    <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center gap-6">
+                        <div class="flex-1 text-center sm:text-left">
+                            <span class="bg-blue-100 text-brand-blue text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-2 inline-block">Lever 3: Localized Promos</span>
+                            <h4 class="text-lg font-bold text-slate-900">Branded Sports & Family Events</h4>
+                            <p class="text-sm text-slate-600 mt-1">Replaces generic templates with localized pushes (e.g., "Ravens Watch Parties", "PG County School Break Bundles").</p>
+                        </div>
+                        <div class="flex items-center gap-4 text-center border-t sm:border-t-0 sm:border-l border-slate-200 pt-4 sm:pt-0 sm:pl-6 w-full sm:w-auto">
+                            <div>
+                                <p class="text-xs text-slate-500 font-medium mb-1">Event Lift</p>
+                                <p class="text-xl font-bold text-slate-900">2.5x</p>
+                            </div>
+                            <div>
+                                <i data-lucide="arrow-right" class="w-5 h-5 text-slate-300"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-brand-orange font-bold mb-1">Annualized</p>
+                                <p class="text-2xl font-black text-brand-orange">+$450K</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Aggregated Total Block -->
+                <div class="lg:col-span-5 bg-slate-900 rounded-2xl p-8 shadow-2xl border border-slate-800 text-white flex flex-col justify-center">
+                    <h4 class="text-lg font-medium text-slate-400 mb-6 border-b border-slate-700 pb-4">Where the targeted $1.5M comes from:</h4>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex justify-between items-center text-sm">
+                            <span class="text-slate-300">Daypart Recovery (Lunch/Afternoon)</span>
+                            <span class="font-bold text-white">$350,000</span>
+                        </li>
+                        <li class="flex justify-between items-center text-sm">
+                            <span class="text-slate-300">Lapsed VIP & Guest Reactivation</span>
+                            <span class="font-bold text-white">$280,000</span>
+                        </li>
+                        <li class="flex justify-between items-center text-sm">
+                            <span class="text-slate-300">Hyper-Local Event Distribution</span>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-orange-50 border border-brand-orange/20 p-3 rounded-lg"><i data-lucide="smartphone" class="w-6 h-6 text-brand-orange"></i></div>
+                            <div>
+                                <h4 class="text-slate-900 font-bold">Real-Time Intervention (Phase 6+)</h4>
+                                <p class="text-slate-600 text-sm mt-1">If Thursday 4-6pm traffic is slow by 4:30pm, the system auto-triggers an emergency SMS/GMB promo to nearby loyalty members.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DEPLOYMENT REALITY FOR IT -->
+                    <div class="bg-white border border-slate-200 shadow-sm rounded-xl p-6 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500"></div>
+                        <h4 class="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                            <i data-lucide="shield-check" class="text-emerald-600 w-5 h-5"></i> Deployment Reality (For IT & Ops)
+                        </h4>
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <strong class="text-slate-800 block text-sm">No POS Disruption</strong>
+                                <span class="text-xs text-slate-500">Zero downtime during install.</span>
+                            </div>
+                            <div>
+                                <strong class="text-slate-800 block text-sm">Read-Only Data Layer</strong>
+                                <span class="text-xs text-slate-500">We never write to your core systems.</span>
+                            </div>
+                            <div>
+                                <strong class="text-slate-800 block text-sm">14-Day Install</strong>
+                                <span class="text-xs text-slate-500">Live within two weeks of approval.</span>
+                            </div>
+                            <div>
+                                <strong class="text-slate-800 block text-sm">No IT Rebuild</strong>
+                                <span class="text-xs text-slate-500">Works quietly alongside your stack.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <!-- Sleek Dashboard UI Mockup -->
+                <div class="relative lg:ml-8">
+                    <!-- Glowing background effect -->
+                    <div class="absolute inset-0 bg-brand-orange/20 blur-[60px] rounded-full"></div>
+                    
+                    <div class="bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden relative z-10 transform lg:rotate-2 hover:rotate-0 transition-transform duration-500">
+                        <!-- Mac-style Window Header -->
+                        <div class="bg-slate-950 px-4 py-3 border-b border-slate-800 flex items-center gap-2">
+                            <div class="w-3 h-3 rounded-full bg-slate-700"></div>
+                            <div class="w-3 h-3 rounded-full bg-slate-700"></div>
+                            <div class="w-3 h-3 rounded-full bg-slate-700"></div>
+                            <div class="text-xs text-slate-400 font-medium ml-4 flex items-center gap-2">
+                                <i data-lucide="lock" class="w-3 h-3 text-emerald-500"></i> StoreOS Analytics • Capitol Heights
+                            </div>
+                        </div>
+                        <!-- Dashboard Content -->
+                        <div class="p-6 md:p-8">
+                            <div class="flex justify-between items-end mb-8">
+                                <div>
+                                    <h3 class="text-white font-bold text-xl mb-1">Thursday Power Hour</h3>
+                                    <p class="text-slate-400 text-sm">Real-time intervention active</p>
+                                </div>
+                                <span class="bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs px-3 py-1.5 rounded-full font-bold flex items-center gap-2">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Live Feed
+                                </span>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-4 mb-8">
+                                <div class="bg-slate-800/80 border border-slate-700 p-5 rounded-xl">
+                                    <p class="text-xs text-slate-400 uppercase font-bold tracking-wider mb-2">Current Traffic</p>
+                                    <p class="text-3xl text-white font-black">142 <span class="text-sm font-medium text-emerald-400 ml-2 bg-emerald-400/10 px-2 py-0.5 rounded">↑ 18%</span></p>
+                                </div>
+                                <div class="bg-slate-800/80 border border-slate-700 p-5 rounded-xl">
+                                    <p class="text-xs text-slate-400 uppercase font-bold tracking-wider mb-2">Projected Rev</p>
+                                    <p class="text-3xl text-white font-black">$12.4K <span class="text-sm font-medium text-emerald-400 ml-2 bg-emerald-400/10 px-2 py-0.5 rounded">Target Hit</span></p>
+                                </div>
+                            </div>
+
+                            <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-5">
+                                <p class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Recent Agent Activity</p>
+                                <div class="space-y-4">
+                                    <div class="flex items-center justify-between text-sm bg-slate-800/50 p-3 rounded-lg border border-slate-700/50">
+                                        <div class="flex items-center gap-3 text-slate-200 font-medium">
+                                            <div class="bg-brand-orange/20 p-2 rounded text-brand-orange"><i data-lucide="message-square" class="w-4 h-4"></i></div>
+                                            SMS Promo Sent (Loyalty Segment)
+                                        </div>
+                                        <span class="text-slate-400 font-medium text-xs">10 mins ago</span>
+                                    </div>
+                                    <div class="flex items-center justify-between text-sm bg-slate-800/50 p-3 rounded-lg border border-slate-700/50">
+                                        <div class="flex items-center gap-3 text-slate-200 font-medium">
+                                            <div class="bg-brand-blue/20 p-2 rounded text-brand-blue"><i data-lucide="map-pin" class="w-4 h-4"></i></div>
+                                            Geo-fence Radius Expanded (3mi)
+                                        </div>
+                                        <span class="text-slate-400 font-medium text-xs">1 hour ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PILOT EXECUTION TIMELINE -->
+    <section id="timeline" class="py-24 bg-slate-50 border-t border-slate-200 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold text-brand-orange uppercase tracking-wider mb-2">What Happens After You Say Yes</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">The 90-Day Validation Track</h3>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">We do not flip a switch and guess. The rollout is controlled, predictable, and mathematically validated at every phase.</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6 relative">
+                <!-- Desktop Connecting Line -->
+                <div class="hidden md:block absolute top-12 left-0 w-full h-1 bg-slate-200 z-0"></div>
+
+                <!-- Phase 1 -->
+                <div class="relative z-10 text-center md:text-left flex flex-col items-center md:items-start">
+                    <div class="w-10 h-10 bg-white border-4 border-slate-200 rounded-full mb-4 flex items-center justify-center font-bold text-slate-500 z-10">1</div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-2">Weeks 1-2</h4>
+                    <p class="text-brand-orange text-sm font-bold mb-3 uppercase tracking-wide">Integration & Baseline</p>
+                    <ul class="text-sm text-slate-600 space-y-2 text-left w-full max-w-[200px]">
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-slate-400 mt-0.5 flex-shrink-0"></i> Read-only POS connection established.</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-slate-400 mt-0.5 flex-shrink-0"></i> 12-month trailing data mapped.</li>
+                    </ul>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="relative z-10 text-center md:text-left flex flex-col items-center md:items-start mt-8 md:mt-0">
+                    <div class="w-10 h-10 bg-brand-orange border-4 border-orange-100 rounded-full mb-4 flex items-center justify-center font-bold text-white shadow-md shadow-brand-orange/30 z-10">2</div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-2">Weeks 3-4</h4>
+                    <p class="text-brand-orange text-sm font-bold mb-3 uppercase tracking-wide">Initial Deployment</p>
+                    <ul class="text-sm text-slate-600 space-y-2 text-left w-full max-w-[200px]">
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-slate-400 mt-0.5 flex-shrink-0"></i> First daypart recovery campaigns go live.</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-slate-400 mt-0.5 flex-shrink-0"></i> GM dashboard onboarding & early signal tracking.</li>
+                    </ul>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="relative z-10 text-center md:text-left flex flex-col items-center md:items-start mt-8 md:mt-0">
+                    <div class="w-10 h-10 bg-white border-4 border-slate-200 rounded-full mb-4 flex items-center justify-center font-bold text-slate-500 z-10">3</div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-2">Month 2</h4>
+                    <p class="text-brand-orange text-sm font-bold mb-3 uppercase tracking-wide">Optimization Loops</p>
+                    <ul class="text-sm text-slate-600 space-y-2 text-left w-full max-w-[200px]">
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-slate-400 mt-0.5 flex-shrink-0"></i> Refining frequency caps and segment matching.</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-slate-400 mt-0.5 flex-shrink-0"></i> Establishing repeatable operational patterns.</li>
+                    </ul>
+                </div>
+
+                <!-- Phase 4 -->
+                <div class="relative z-10 text-center md:text-left flex flex-col items-center md:items-start mt-8 md:mt-0">
+                    <div class="w-10 h-10 bg-slate-900 border-4 border-slate-200 rounded-full mb-4 flex items-center justify-center font-bold text-white z-10 shadow-md">4</div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-2">Month 3</h4>
+                    <p class="text-brand-orange text-sm font-bold mb-3 uppercase tracking-wide">Rollout Decision</p>
+                    <ul class="text-sm text-slate-600 space-y-2 text-left w-full max-w-[200px]">
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-slate-400 mt-0.5 flex-shrink-0"></i> Validation of leading indicators.</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-slate-400 mt-0.5 flex-shrink-0"></i> Executive review to determine regional expansion protocol.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENTERPRISE SCALE ROADMAP -->
+    <section class="py-24 bg-brand-dark text-white relative overflow-hidden border-t border-slate-800">
+        <div class="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
+            <i data-lucide="layers" class="w-64 h-64 text-white"></i>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold text-brand-orange uppercase tracking-wider mb-2">Corporate Strategy</h2>
+                <h3 class="text-3xl md:text-5xl font-extrabold mb-6">The Path to 241+ Locations</h3>
+                
+                <div class="border-l-4 border-brand-orange pl-5 py-2 mb-8 bg-slate-800/50 rounded-r-xl max-w-2xl mx-auto text-left">
+                    <p class="text-lg font-bold text-slate-300 italic">"Corporate visibility should not require store-level manual reporting."</p>
+                </div>
+
+                <p class="text-lg text-slate-400 max-w-3xl mx-auto">This system gives corporate unfiltered visibility into exactly what local levers drive actual revenue. It standardizes successful promotions and establishes hard benchmarking—all without adding a single hour of reporting burden to your GMs.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 bg-slate-800/50 rounded-2xl border border-slate-700 relative hover:bg-slate-800 transition-colors">
+                    <div class="w-12 h-12 bg-slate-700 text-white rounded-full flex items-center justify-center font-bold text-xl mb-6 border-2 border-slate-600">1</div>
+                    <h4 class="text-xl font-bold mb-3">The Model Store Pilot</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Deploy strictly at Capitol Heights. Our mandate is to prove the unit economics, stabilize the IT integration, and validate the modeled revenue lift within a controlled 90-day window.</p>
+                </div>
+                <div class="p-8 bg-slate-800/80 rounded-2xl border border-brand-orange/40 relative transform md:-translate-y-4 shadow-2xl shadow-brand-orange/10">
+                    <div class="w-12 h-12 bg-brand-orange text-white rounded-full flex items-center justify-center font-bold text-xl mb-6 border-2 border-brand-orange shadow-lg shadow-brand-orange/40">2</div>
+                    <h4 class="text-xl font-bold mb-3 text-white">Regional Rollout</h4>
+                    <p class="text-slate-300 text-sm leading-relaxed">Expand to the DMV district. We test multi-unit scalability, establish regional benchmarking, and begin cross-pollinating winning promotion formats automatically between stores.</p>
+                </div>
+                <div class="p-8 bg-slate-800/50 rounded-2xl border border-slate-700 relative hover:bg-slate-800 transition-colors">
+                    <div class="w-12 h-12 bg-slate-700 text-white rounded-full flex items-center justify-center font-bold text-xl mb-6 border-2 border-slate-600">3</div>
+                    <h4 class="text-xl font-bold mb-3">System-Wide Playbook</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">A plug-and-play enterprise rollout across all 200+ locations. Corporate gains unprecedented visibility into localized execution, generating a modeled nine-figure system-wide lift.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing / Tiers & RISK REVERSAL -->
+    <section id="pricing" class="py-24 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Executive Pilot Structures</h2>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">We offer traditional licensing, but we strongly prefer operational partnerships that align our compensation directly with your revenue growth.</p>
+            </div>
+
+            <!-- RISK REVERSAL / PERFORMANCE ALIGNMENT -->
+            <div class="bg-gradient-to-r from-slate-900 to-[#1e293b] rounded-3xl p-8 md:p-12 mb-16 shadow-2xl border border-slate-800 relative overflow-hidden">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-emerald-500/10 to-transparent"></div>
+                <div class="grid lg:grid-cols-2 gap-10 items-center relative z-10">
+                    <div>
+                        <span class="bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-6 inline-block">Recommended for Corporate</span>
+                        <h3 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Performance Alignment</h3>
+                        <p class="text-slate-300 text-lg leading-relaxed mb-6">We understand capital expenditure risk. Rather than standard vendor pricing, we offer a milestone-based, revenue-share model tied strictly to validated POS results.</p>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                                <div>
+                                    <h5 class="text-white font-bold text-sm">12-Month Trailing Baseline</h5>
+                                    <p class="text-slate-400 text-sm">We establish a hard mathematical floor using your historical POS data before turning the system on. Every daypart is baselined.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                                <div>
+                                    <h5 class="text-white font-bold text-sm">Strictly Incremental Measurement</h5>
+                                    <p class="text-slate-400 text-sm">Our fee is a set percentage of the POS-validated lift generated strictly <em>above</em> the baselined floor during targeted intervention windows.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                                <div>
+                                    <h5 class="text-white font-bold text-sm">Shared Operational Risk</h5>
+                                    <p class="text-slate-400 text-sm">If leading indicators don't mathematically prove the lift, you pay nothing for performance. Measurable. Enforceable. Safe.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="w-full sm:w-auto group relative inline-flex flex-col items-center justify-center bg-gradient-to-b from-[#10b981] to-[#059669] border-b-[5px] border-[#047857] hover:border-b-[3px] hover:translate-y-[2px] active:border-b-0 active:translate-y-[5px] text-white px-8 py-4 rounded-xl font-black text-xl transition-all shadow-[0_10px_30px_rgba(16,185,129,0.3)] uppercase tracking-wide">
+                            <span class="flex items-center gap-2">DISCUSS REV-SHARE PILOT <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i></span>
+                            <span class="text-xs font-medium text-emerald-100 normal-case mt-1 tracking-normal">Lower upfront capital option</span>
+                        </button>
+                    </div>
+                    
+                    <div class="hidden lg:flex justify-end">
+                        <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-2xl w-full max-w-sm backdrop-blur-sm">
+                            <h4 class="text-slate-300 font-bold mb-4 text-sm uppercase tracking-wide border-b border-slate-700 pb-2">Alternative: Flat License Structure</h4>
+                            <div class="mb-4">
+                                <p class="text-slate-400 text-sm">Core Setup & Integrations</p>
+                                <p class="text-white font-bold text-xl">$50,000 <span class="text-xs text-slate-500 font-normal">One-time</span></p>
+                            </div>
+                            <div class="mb-4">
+                                <p class="text-slate-400 text-sm">Premium Enterprise Intel</p>
+                                <p class="text-white font-bold text-xl">+$25,000 <span class="text-xs text-slate-500 font-normal">Optional</span></p>
+                            </div>
+                            <div class="mb-6">
+                                <p class="text-slate-400 text-sm">Ongoing Managed Execution</p>
+                                <p class="text-white font-bold text-xl">$5,000 <span class="text-xs text-slate-500 font-normal">/ month</span></p>
+                            </div>
+                            <button class="w-full bg-slate-700 hover:bg-slate-600 text-white py-3 rounded-lg font-bold text-sm uppercase transition-colors">Request License Terms</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA with URGENCY -->
+    <section class="py-24 relative overflow-hidden bg-white border-t border-slate-200">
+        <div class="absolute inset-0 bg-brand-orange/5"></div>
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-100 border border-red-200 text-red-600 text-sm font-bold mb-8 shadow-sm">
+                <i data-lucide="lock" class="w-4 h-4"></i> Strategic Timing: Limited to 1 Model Store per Region
+            </div>
+            
+            <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6">Ready to validate the playbook?</h2>
+            <p class="text-xl text-slate-600 mb-10 font-medium">Most AI tools just give you a chatbot. We give you an execution engine that targets a validated payback phase within 3-4 months based on modeled outcomes.</p>
+            
+            <button class="group relative inline-flex flex-col items-center justify-center w-full sm:w-auto bg-gradient-to-b from-[#FF7A00] to-[#cc4600] border-b-[5px] border-[#993400] hover:border-b-[3px] hover:translate-y-[2px] active:border-b-0 active:translate-y-[5px] text-white px-10 py-5 rounded-xl font-black text-2xl transition-all shadow-[0_10px_30px_rgba(255,90,0,0.4)] uppercase tracking-wide animate-bounce hover:animate-none">
+                <span class="flex items-center gap-2">SECURE THE PILOT <i data-lucide="arrow-right" class="w-6 h-6 group-hover:translate-x-1 transition-transform"></i></span>
+                <span class="text-sm font-medium text-white/80 normal-case mt-1 tracking-normal">Lock in Capitol Heights as the exclusive regional model store</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-50 border-t border-slate-200 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500 font-medium">
+            <div class="flex items-center gap-3">
+                <i data-lucide="cpu" class="w-6 h-6 text-brand-orange"></i>
+                <div class="flex flex-col">
+                    <span class="font-bold text-slate-700 leading-none text-lg">StoreOS</span>
+                    <span class="text-brand-orange font-bold text-[9px] uppercase tracking-wider mt-1">In-Store Marketing & Sales Rep</span>
+                </div>
+            </div>
+            <p>Confidential Proposal for Dave & Buster's Capitol Heights</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
